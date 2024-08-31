@@ -1,7 +1,6 @@
-# :rocket: Room 5
+# :pushpin: Room 5 :pushpin:
 
-## :pushpin: Tecnologías utilizadas :pushpin:
-- CSS
+## :black_nib: Tecnologías utilizadas 
 - HTML
 - JavaScript
 - Visual Studio Code
