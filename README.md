@@ -13,4 +13,4 @@
 - Nicolas Lippi
 - Alejandra Contreras
 
-#### Bootcamp Full Stack JavaScript - Talento Digital
+#### Bootcamp Full Stack JavaScript - Talento Digital :sunny:
