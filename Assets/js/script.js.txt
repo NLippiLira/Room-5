@@ -1,0 +1,124 @@
+/* TIPS DE LA PROFE
+Claves del reto: Manipulación del DOM, 
+Recorrido de Array, 
+Creación de elementos en HTML a partir de JavaScript 
+y un dato curioso....setInterval
+
+    ];*/
+    const vuelos = [
+        {
+          vuelo: "AA101",
+          destino: "Nueva York",
+          hora: "08:00",
+          estado: "Abordando",
+          puerta: "A1",
+        },
+        {
+          vuelo: "BA202",
+          destino: "Londres",
+          hora: "09:30",
+          estado: "En Espera",
+          puerta: "B2",
+        },
+        {
+          vuelo: "AF303",
+          destino: "París",
+          hora: "10:15",
+          estado: "Cancelado",
+          puerta: "C3",
+        },
+        {
+          vuelo: "IB404",
+          destino: "Madrid",
+          hora: "11:00",
+          estado: "A Tiempo",
+          puerta: "D4",
+        },
+        {
+          vuelo: "LH505",
+          destino: "Berlín",
+          hora: "12:30",
+          estado: "Retrasado",
+          puerta: "E5",
+        },
+        {
+          vuelo: "DL606",
+          destino: "Atlanta",
+          hora: "13:00",
+          estado: "Abordando",
+          puerta: "F6",
+        },
+        {
+          vuelo: "UA707",
+          destino: "Chicago",
+          hora: "14:00",
+          estado: "En Espera",
+          puerta: "G7",
+        },
+        {
+          vuelo: "KL808",
+          destino: "Ámsterdam",
+          hora: "15:15",
+          estado: "Cancelado",
+          puerta: "H8",
+        },
+        {
+          vuelo: "QF909",
+          destino: "Sídney",
+          hora: "16:45",
+          estado: "A Tiempo",
+          puerta: "I9",
+        },
+      ];
+      
+      
+      const tbody = document.querySelector("#tabla-vuelos");
+      function ColorEstado(estado) {
+        switch (estado) {
+            case 'Abordando':
+                return 'yellow';  
+            case 'En Espera':
+                return 'orange'; 
+            case 'Cancelado':
+                return 'red'; 
+            case 'A Tiempo':
+                return 'green';  
+            case 'Retrasado':
+                return 'purple'; 
+            default:
+                return 'black';  
+        }}
+      // Función para mostrar los datos en la tabla
+      function mostrarDatosEnTabla() {
+        vuelos.forEach((vuelos) => {
+          const fila = document.createElement("tr");
+          const celdaVuelo = document.createElement("td");
+          const celdaDestino = document.createElement("td");
+          const celdaHora = document.createElement("td");
+          const celdaEstado = document.createElement("td");
+          const celdaPuerta = document.createElement("td");
+      
+          celdaVuelo.textContent = vuelos.vuelo;
+          celdaDestino.textContent = vuelos.destino;
+          celdaHora.textContent = vuelos.hora;
+          celdaEstado.textContent = vuelos.estado;
+          celdaEstado.style.color = ColorEstado(vuelos.estado); // Asignar color según el estado
+          celdaPuerta.textContent = vuelos.puerta;
+      
+          fila.appendChild(celdaVuelo);
+          fila.appendChild(celdaDestino);
+          fila.appendChild(celdaHora);
+          fila.appendChild(celdaEstado);
+          fila.appendChild(celdaPuerta);
+      
+          tbody.appendChild(fila);
+        });
+      
+        
+      }
+      //mostrarDatosEnTabla();
+      this.addEventListener("load", mostrarDatosEnTabla);
+      
+      
+      
+      
