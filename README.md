@@ -2,6 +2,7 @@
 
 ## :black_nib: Tecnologías utilizadas 
 - HTML
+- CSS
 - JavaScript
 - Visual Studio Code
 
